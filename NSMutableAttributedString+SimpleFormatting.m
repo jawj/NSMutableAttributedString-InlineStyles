@@ -1,23 +1,21 @@
-
 #import "NSMutableAttributedString+SimpleFormatting.h"
+#define kTextFormatNameStem @"com.mackerron.fmt."
 
 @implementation NSMutableAttributedString (SimpleFormatting)
 
-#define kTextFormatNameStem @"com.mackerron.fmt."
-
-+ (NSMutableAttributedString*)fromSimpleMarkdown:(NSString*)markdown withFontBaseName:(NSString*)fontName size:(CGFloat)size {
-  return [self fromSimpleMarkdown:markdown
-                  withRegularFont:[UIFont fontWithName:[fontName stringByAppendingString:@"-Regular"]    size:size]
-                         boldFont:[UIFont fontWithName:[fontName stringByAppendingString:@"-Bold"]       size:size]
-                       italicFont:[UIFont fontWithName:[fontName stringByAppendingString:@"-Italic"]     size:size]
-                   boldItalicFont:[UIFont fontWithName:[fontName stringByAppendingString:@"-BoldItalic"] size:size]];
++ (NSMutableAttributedString*)fromString:(NSString*)markdown withFontBaseName:(NSString*)fontName size:(CGFloat)size {
+  return [self fromString:markdown
+          withRegularFont:[UIFont fontWithName:[fontName stringByAppendingString:@"-Regular"]    size:size]
+                 boldFont:[UIFont fontWithName:[fontName stringByAppendingString:@"-Bold"]       size:size]
+               italicFont:[UIFont fontWithName:[fontName stringByAppendingString:@"-Italic"]     size:size]
+           boldItalicFont:[UIFont fontWithName:[fontName stringByAppendingString:@"-BoldItalic"] size:size]];
 }
 
-+ (NSMutableAttributedString*)fromSimpleMarkdown:(NSString*)markdown
-                                 withRegularFont:(UIFont*)regularFont
-                                        boldFont:(UIFont*)boldFont
-                                      italicFont:(UIFont*)italicFont
-                                  boldItalicFont:(UIFont*)boldItalicFont {
++ (NSMutableAttributedString*)fromString:(NSString*)markdown
+                         withRegularFont:(UIFont*)regularFont
+                                boldFont:(UIFont*)boldFont
+                              italicFont:(UIFont*)italicFont
+                          boldItalicFont:(UIFont*)boldItalicFont {
   
   NSMutableAttributedString* attrStr = [[NSMutableAttributedString alloc] initWithString:markdown];
   NSRegularExpression* markdownRegex = [NSRegularExpression regularExpressionWithPattern:@"(?<=^|[\\s(])([*_/-])(?=\\S)(.+?)(?<=\\S)\\1(?=$|[\\s),:;.?!])"
