@@ -1,4 +1,4 @@
-@interface NSMutableAttributedString (GeneralAdditions)
+@interface NSMutableAttributedString (SimpleFormatting)
 
 + (NSMutableAttributedString*)fromString:(NSString*)markdown
                         withFontBaseName:(NSString*)fontName
