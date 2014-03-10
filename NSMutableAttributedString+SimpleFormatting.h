@@ -1,14 +1,13 @@
+@interface NSMutableAttributedString (GeneralAdditions)
 
-@interface NSMutableAttributedString (SimpleFormatting)
++ (NSMutableAttributedString*)fromString:(NSString*)markdown
+                        withFontBaseName:(NSString*)fontName
+                                    size:(CGFloat)size;
 
-+ (NSMutableAttributedString*)fromSimpleMarkdown:(NSString*)markdown
-                                withFontBaseName:(NSString*)fontName
-                                            size:(CGFloat)size;
-
-+ (NSMutableAttributedString*)fromSimpleMarkdown:(NSString*)markdown
-                                 withRegularFont:(UIFont*)regularFont
-                                        boldFont:(UIFont*)boldFont
-                                      italicFont:(UIFont*)italicFont
-                                  boldItalicFont:(UIFont*)boldItalicFont;
++ (NSMutableAttributedString*)fromSimpleString:(NSString*)markdown
+                               withRegularFont:(UIFont*)regularFont
+                                      boldFont:(UIFont*)boldFont
+                                    italicFont:(UIFont*)italicFont
+                                boldItalicFont:(UIFont*)boldItalicFont;
 
 @end
