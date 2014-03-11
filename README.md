@@ -8,6 +8,6 @@ Simple inline formatting for `NSMutableAttributedString`.
 
 Ideal for displaying the odd `UILabel` with bold or italic sections. If you want a complete Markdown or Textile implementation, that's available (with considerable extra heft) elsewhere.
 
-Tip: save wear on your fingers by putting this line in YourProject-Prefix.pch:
+Tip: save wear on your fingers by putting this line in `YourProject-Prefix.pch`:
 
-    #define NSMAString  NSMutableAttributedString
+    #define NSMAString NSMutableAttributedString
