@@ -9,7 +9,7 @@
 #import "NSMutableAttributedString+InlineStyles.h"
 #define kTextFormatNameStem @"com.mackerron.fmt."
 
-@implementation NSMutableAttributedString (GeneralAdditions)
+@implementation NSMutableAttributedString (InlineStyles)
 
 - (void)applyFormattingWithFontNamesForRegular:(NSString*)regularFontName
                                           bold:(NSString*)boldFontName
@@ -122,3 +122,4 @@
 }
 
 @end
+
