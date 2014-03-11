@@ -1,7 +1,7 @@
 NSMutableAttributedString+InlineStyles
 ---
 
-Simple inline formatting for `NSMutableAttributedString`. 
+Simple inline formatting for `NSMutableAttributedString` in one screenful of code.
 
     Applies *bold*, /italic/, _underline_, -strikethrough-, ^superscript^ and ~subscript~ styles.
     Handles */nested/* and *overlapping /styles* properly/.
