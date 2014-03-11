@@ -26,6 +26,6 @@ Code like this:
 
 ### Tip
 
-Save wear on your fingers (and make the above example work) by putting this line in `YourProject-Prefix.pch`:
+Save wear on your fingers (and make the above example work) by including the following in `YourProject-Prefix.pch`:
 
     #define NSMAString NSMutableAttributedString
