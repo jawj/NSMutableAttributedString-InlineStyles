@@ -1,22 +1,13 @@
-NSMutableAttributedString+SimpleFormatting
+NSMutableAttributedString+InlineStyles
 ---
 
-Really basic RegExp-based formatting for NSAttributedString. 
+Simple inline formatting for `NSMutableAttributedString`. 
 
-    Applies *bold*, /italic/, _underline_ and -strikethrough- styles. 
+    Applies *bold*, /italic/, _underline_, -strikethrough-, ^superscript^ and ~subscript~. 
     Handles */nested/* and /also *overlapping/ styles*.
 
-Consists of two category methods on NSAttributedString. The work is done by:
+Ideal for displaying the odd `UILabel` with bold or italic sections. If you want a complete Markdown or Textile implementation, that's available (with considerable extra heft) elsewhere.
 
-    + (NSMutableAttributedString*)fromSimpleString:(NSString*)markdown
-                                   withRegularFont:(UIFont*)regularFont
-                                          boldFont:(UIFont*)boldFont
-                                        italicFont:(UIFont*)italicFont
-                                    boldItalicFont:(UIFont*)boldItalicFont;
+Tip: save wear on your fingers by putting this line in YourProject-Prefix.pch:
 
-A convenience method is also provided:
-
-    + (NSMutableAttributedString*)fromString:(NSString*)markdown
-                            withFontBaseName:(NSString*)fontName
-                                        size:(CGFloat)size;
-   
+    #define NSMAString  NSMutableAttributedString
