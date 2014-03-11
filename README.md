@@ -10,6 +10,12 @@ Ideal for displaying the odd `UILabel` with bold or italic sections. If you want
 
 ### Example
 
+To produce this:
+
+![Example image](http://i.imgur.com/JNTgcNG.png)
+
+Code like this:
+
     UILabel* label = [[UILabel alloc] initWithFrame:CGRectZero];
     label.attributedText = [NSMAString withString:@"Applies *bold*, /italic/, _underline_, -strikethrough-,\n"
                                                    "^superscript^ and ~subscript~ styles.\n"
@@ -20,6 +26,6 @@ Ideal for displaying the odd `UILabel` with bold or italic sections. If you want
 
 ### Tip
 
-Save wear on your fingers by putting this line in `YourProject-Prefix.pch`:
+Save wear on your fingers (and make the above example work) by putting this line in `YourProject-Prefix.pch`:
 
     #define NSMAString NSMutableAttributedString
