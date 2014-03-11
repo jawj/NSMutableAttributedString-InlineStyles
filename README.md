@@ -8,6 +8,18 @@ Simple inline formatting for `NSMutableAttributedString`.
 
 Ideal for displaying the odd `UILabel` with bold or italic sections. If you want a complete Markdown or Textile implementation, that's available (with considerable extra heft) elsewhere.
 
-Tip: save wear on your fingers by putting this line in `YourProject-Prefix.pch`:
+### Example
+
+    UILabel* label = [[UILabel alloc] initWithFrame:CGRectZero];
+    label.attributedText = [NSMAString withString:@"Applies *bold*, /italic/, _underline_, -strikethrough-,\n"
+                                                   "^superscript^ and ~subscript~ styles.\n"
+                                                   "Handles */nested/* and *overlapping /styles* properly/."
+                                     fontBaseName:@"AvenirNext"
+                                          andSize:14.0f];
+    [label sizeToFit];
+
+### Tip
+
+Save wear on your fingers by putting this line in `YourProject-Prefix.pch`:
 
     #define NSMAString NSMutableAttributedString
