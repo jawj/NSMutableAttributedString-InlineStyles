@@ -10,16 +10,16 @@
 
 @interface NSMutableAttributedString (InlineStyles)
 
-- (void)applyFormattingWithFontSize:(CGFloat)fontSize
-                 andNamesForRegular:(NSString*)regularFontName
-                               bold:(NSString*)boldFontName
-                             italic:(NSString*)italicFontName
-                         boldItalic:(NSString*)boldItalicFontName;
+- (void)applyFormattingWithFontNamesForRegular:(NSString*)regularFontName
+                                          bold:(NSString*)boldFontName
+                                        italic:(NSString*)italicFontName
+                                    boldItalic:(NSString*)boldItalicFontName
+                                       andSize:(CGFloat)fontSize;
 
 #pragma mark Convenience methods
 
-- (void)applyFormattingWithFontSize:(CGFloat)fontSize
-                        andBaseName:(NSString*)fontBaseName;
+- (void)applyFormattingWithFontBaseName:(NSString*)fontBaseName
+                                andSize:(CGFloat)fontSize;
 
 + (NSMutableAttributedString*)withString:(NSString*)str
                             fontBaseName:(NSString*)fontBaseName
