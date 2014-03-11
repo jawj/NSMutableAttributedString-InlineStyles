@@ -29,3 +29,7 @@ Code like this:
 Save wear on your fingers (and make the above example work) by including the following in `YourProject-Prefix.pch`:
 
     #define NSMAString NSMutableAttributedString
+
+### Licence
+
+[MIT](http://opensource.org/licenses/MIT)
